@@ -2,8 +2,8 @@
 	"name": "@coralproject/talk-plugin-slack-bouncer",
 	"version": "1.0.0",
 	"main": "index.js",
-	"author": "Wyatt Johnson <wyattjoh@gmail.com>",
-	"license": "MIT",
+	"author": "",
+	"license": "Apache-2.0",
 	"devDependencies": {
 		"@coralproject/eslint-config-talk": "^0.0.4"
 	},
