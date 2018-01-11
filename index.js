@@ -127,6 +127,40 @@ module.exports = {
       return;
     }
 
+    // Handle to provide localized strings relative to this installation.
+    router.post('/api/slack-bouncer/translate', authorization.needed('ADMIN', 'MODERATOR'), async (req, res, next) => {
+      const {value: body, error: err} = Joi.validate(req.body, Joi.object().keys({
+        key: Joi.string().required(),
+        replacements: Joi.array().default([])
+      })
+        .optionalKeys('replacements'), {
+        stripUnknown: true,
+        convert: true,
+        presence: 'required',
+      });
+      if (err) {
+        return res.status(400).end();
+      }
+
+      const {key, replacements} = body;
+
+      // Perform the translation.
+      const translation = res.locals.t(key, ...replacements);
+
+      // Return the response.
+      res.format({
+        'text/plain': () => {
+          res.send(translation);
+        },
+        'application/json': () => {
+          res.send({translation});
+        },
+        'default': () => {
+          res.status(406).send('Not Acceptable');
+        }
+      });
+    });
+
     // Handle to verify that the application is properly setup for the slack
     // bouncer features.
     router.post('/api/slack-bouncer/test', authorization.needed('ADMIN', 'MODERATOR'), (req, res, next) => {
