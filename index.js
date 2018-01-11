@@ -162,6 +162,7 @@ module.exports = {
 
       // Looks like all the parameters match, respond with the challenge.
       return res.status(202).json({
+        talk_version: get(this, 'pkg.version', '3.0.0'),
         challenge,
         client_version: pkg.version,
       });
