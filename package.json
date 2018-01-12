@@ -5,7 +5,7 @@
 	"author": "",
 	"license": "Apache-2.0",
 	"devDependencies": {
-		"@coralproject/eslint-config-talk": "^0.0.4",
+		"@coralproject/eslint-config-talk": "^0.1.0",
 		"eslint": "^4.14.0"
 	},
 	"dependencies": {
