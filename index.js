@@ -201,14 +201,6 @@ module.exports = {
           return res.status(400).end();
         }
 
-        // Don't validate any tests if the auth token is set on the application.
-        if (
-          TALK_SLACK_BOUNCER_AUTH_TOKEN &&
-          TALK_SLACK_BOUNCER_AUTH_TOKEN.length > 0
-        ) {
-          return res.status(400).end();
-        }
-
         const { challenge, handshake_token, injestion_url } = body;
 
         // Check that the handshake matches.
