@@ -1,17 +1,17 @@
 {
-	"name": "@coralproject/talk-plugin-slack-bouncer",
-	"version": "1.2.1",
-	"main": "index.js",
-	"author": "",
-	"license": "Apache-2.0",
-	"devDependencies": {
-		"@coralproject/eslint-config-talk": "^0.1.0",
-		"eslint": "^4.14.0"
-	},
-	"dependencies": {
-		"debug": "^3.1.0",
-		"joi": "^13.0.0",
-		"lodash": "^4.17.4",
-		"node-fetch": "^1.7.3"
-	}
+  "name": "@coralproject/talk-plugin-slack-bouncer",
+  "version": "1.2.2",
+  "main": "index.js",
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@coralproject/eslint-config-talk": "^0.1.0",
+    "eslint": "^4.14.0"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "joi": "^13.0.0",
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.7.3"
+  }
 }

@@ -46,6 +46,14 @@ module.exports = {
     RootMutation: {
       createFlag: {
         post: async (obj, args, ctx, info, res) => {
+          if (
+            !TALK_SLACK_BOUNCER_AUTH_TOKEN ||
+            !TALK_SLACK_BOUNCER_URL ||
+            !TALK_SLACK_BOUNCER_HANDSHAKE_TOKEN
+          ) {
+            return res;
+          }
+
           const flag = await res.flag;
           if (!res || !flag) {
             return res;
