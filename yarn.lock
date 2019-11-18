@@ -577,8 +577,8 @@ has@^1.0.1:
     function-bind "^1.0.2"
 
 hoek@5.x.x:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/hoek/-/hoek-5.0.0.tgz#b88953e0fec8e58082e4abd223ed20915d535831"
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/hoek/-/hoek-5.0.4.tgz#0f7fa270a1cafeb364a4b2ddfaa33f864e4157da"
 
 iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   version "0.4.19"
